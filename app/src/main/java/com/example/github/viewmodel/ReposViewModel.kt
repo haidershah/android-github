@@ -1,6 +1,7 @@
 package com.example.github.viewmodel
 
-import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.github.model.Repo
 import com.example.github.network.GitHubApi
@@ -11,6 +12,9 @@ import io.reactivex.schedulers.Schedulers
 class ReposViewModel : ViewModel() {
 
     private lateinit var disposable: Disposable
+
+    private val _response = MutableLiveData<List<Repo>>()
+    val response: LiveData<List<Repo>> get() = _response
 
     init {
         getRepos("haidershah")
@@ -27,7 +31,7 @@ class ReposViewModel : ViewModel() {
     }
 
     private fun showResult(repos: List<Repo>) {
-        Log.e("yooooo", "properties: $repos")
+        _response.value = repos
     }
 
     private fun showError(t: Throwable) {
