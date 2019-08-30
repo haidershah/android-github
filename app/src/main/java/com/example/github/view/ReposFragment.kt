@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.example.github.R
 import com.example.github.databinding.FragmentReposBinding
+import com.example.github.view.adapter.ReposAdapter
 import com.example.github.viewmodel.ReposViewModel
 
 class ReposFragment : Fragment() {
@@ -29,6 +30,9 @@ class ReposFragment : Fragment() {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        val adapter = ReposAdapter()
+        binding.reposRecyclerView.adapter = adapter
 
         return binding.root
     }

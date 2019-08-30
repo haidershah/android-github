@@ -1,10 +1,12 @@
 package com.example.github.view.binding
 
-import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.example.github.model.Repo
+import com.example.github.view.adapter.ReposAdapter
 
 @BindingAdapter("listData")
-fun TextView.setListData(repos: List<Repo>?) {
-    text = repos.toString()
+fun RecyclerView.setListData(repos: List<Repo>?) {
+    val adapter = adapter as ReposAdapter
+    adapter.submitList(repos)
 }

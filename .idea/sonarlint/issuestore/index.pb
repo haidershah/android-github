@@ -15,3 +15,10 @@ p
 @app/src/main/java/com/example/github/network/GitHubApiService.kt,4/5/45bc2d2ebaa1c2a6f1c3c655a8001dbd48ffb91e
 p
 @app/src/main/java/com/example/github/viewmodel/ReposViewModel.kt,7/4/74743313a0f1b48cacef0cf670ee57bdf8d39a50
+x
+Happ/src/main/java/com/example/github/view/binding/ReposBindingAdapter.kt,6/0/60cbb4eea2036ec5576ef68a52bab97cb3884c6f
+>
+app/.gitignore,5/1/51e1c5d383dfaa35e0e7e5873a0a99355a86880f
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
