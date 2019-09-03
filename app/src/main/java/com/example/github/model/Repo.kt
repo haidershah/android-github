@@ -10,5 +10,8 @@ data class Repo(
     val id: String,
 
     @SerializedName("name")
-    val name: String
+    val name: String,
+
+    @SerializedName("description")
+    val description: String
 ) : Parcelable
