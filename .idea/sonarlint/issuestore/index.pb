@@ -22,3 +22,11 @@ Happ/src/main/java/com/example/github/view/binding/ReposBindingAdapter.kt,6/0/6
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+u
+Eapp/src/main/java/com/example/github/viewmodel/RepoDetailViewModel.kt,1/c/1cad5dca987b4380f6a8e2c96d3bed626d4d87fb
+q
+Aapp/src/main/java/com/example/github/view/adapter/ReposAdapter.kt,f/b/fb555a6c521723bb005d055269f476ee31729594
+o
+?app/src/main/java/com/example/github/view/RepoDetailFragment.kt,5/b/5beb4bc32176a1530e8b178acb36669857da6e5d
+„
+Tapp/src/main/java/com/example/github/viewmodel/factory/RepoDetailViewModelFactory.kt,7/2/720431fc7e909304ad3ab64f881fd949faf0634a

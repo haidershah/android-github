@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.example.github.R
 import com.example.github.databinding.FragmentReposBinding
 import com.example.github.view.adapter.ReposAdapter
@@ -31,7 +32,10 @@ class ReposFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        val adapter = ReposAdapter()
+        val adapter = ReposAdapter(ReposAdapter.OnClickListener {
+            findNavController().navigate(
+                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(it))
+        })
         binding.reposRecyclerView.adapter = adapter
 
         return binding.root
