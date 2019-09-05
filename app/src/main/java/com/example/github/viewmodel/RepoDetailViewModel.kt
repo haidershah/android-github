@@ -3,7 +3,7 @@ package com.example.github.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 
 class RepoDetailViewModel(repo: Repo) : ViewModel() {
 

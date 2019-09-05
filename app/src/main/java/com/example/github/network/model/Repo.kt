@@ -1,4 +1,4 @@
-package com.example.github.model
+package com.example.github.network.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

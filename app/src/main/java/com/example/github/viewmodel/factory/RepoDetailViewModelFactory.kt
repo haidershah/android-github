@@ -2,7 +2,7 @@ package com.example.github.viewmodel.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 import com.example.github.viewmodel.RepoDetailViewModel
 import java.lang.IllegalArgumentException
 

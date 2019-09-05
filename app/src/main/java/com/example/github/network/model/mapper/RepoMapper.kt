@@ -1,8 +1,8 @@
-package com.example.github.model.mapper
+package com.example.github.network.model.mapper
 
 import android.util.Log
 import com.example.github.database.entity.DatabaseRepo
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 
 fun List<Repo>.asDatabaseModel(): List<DatabaseRepo> {
     return map {

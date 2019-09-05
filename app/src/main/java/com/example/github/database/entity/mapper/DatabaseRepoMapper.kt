@@ -1,7 +1,7 @@
 package com.example.github.database.entity.mapper
 
 import com.example.github.database.entity.DatabaseRepo
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 
 fun List<DatabaseRepo>.asDomainModel(): List<Repo> {
     return map {

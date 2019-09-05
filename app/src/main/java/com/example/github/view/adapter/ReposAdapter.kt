@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.github.databinding.ListItemRepoBinding
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 
 class ReposAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<Repo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {

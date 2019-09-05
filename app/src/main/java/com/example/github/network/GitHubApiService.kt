@@ -1,6 +1,6 @@
 package com.example.github.network
 
-import com.example.github.model.Repo
+import com.example.github.network.model.Repo
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
