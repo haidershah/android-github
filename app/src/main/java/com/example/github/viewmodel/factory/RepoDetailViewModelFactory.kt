@@ -2,12 +2,12 @@ package com.example.github.viewmodel.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.github.network.model.NetworkRepo
+import com.example.github.domain.model.Repo
 import com.example.github.viewmodel.RepoDetailViewModel
 import java.lang.IllegalArgumentException
 
 class RepoDetailViewModelFactory(
-    private val repo: NetworkRepo
+    private val repo: Repo
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

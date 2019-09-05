@@ -3,12 +3,12 @@ package com.example.github.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.github.network.model.NetworkRepo
+import com.example.github.domain.model.Repo
 
-class RepoDetailViewModel(repo: NetworkRepo) : ViewModel() {
+class RepoDetailViewModel(repo: Repo) : ViewModel() {
 
-    private val _repo = MutableLiveData<NetworkRepo>()
-    val repo: LiveData<NetworkRepo> get() = _repo
+    private val _repo = MutableLiveData<Repo>()
+    val repo: LiveData<Repo> get() = _repo
 
     init {
         _repo.value = repo

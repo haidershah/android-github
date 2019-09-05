@@ -6,7 +6,7 @@
 
         <variable
             name="repo"
-            type="com.example.github.network.model.NetworkRepo" />
+            type="com.example.github.domain.model.Repo" />
     </data>
 
     <LinearLayout

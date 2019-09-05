@@ -22,6 +22,6 @@
         tools:layout="@layout/fragment_repo_detail">
         <argument
             android:name="repo"
-            app:argType="com.example.github.network.model.NetworkRepo" />
+            app:argType="com.example.github.domain.model.Repo" />
     </fragment>
 </navigation>

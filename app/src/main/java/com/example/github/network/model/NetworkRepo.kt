@@ -1,10 +1,7 @@
 package com.example.github.network.model
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
-@Parcelize
 data class NetworkRepo(
     @SerializedName("id")
     val id: String,
@@ -14,4 +11,4 @@ data class NetworkRepo(
 
     @SerializedName("description")
     val description: String?
-) : Parcelable
+)
