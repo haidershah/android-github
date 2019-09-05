@@ -17,9 +17,7 @@ class ReposRepository(private val database: RepoDatabase) {
     }
 
     suspend fun getRepos(user: String) {
-        withContext(Dispatchers.IO) {
-            val repos = GitHubApi.RETROFIT_SERVICE.getRepos(user)
-            database.dao.insertAll(repos.asDatabaseModel())
-        }
+        val repos = GitHubApi.RETROFIT_SERVICE.getRepos(user)
+        database.dao.insertAll(repos.asDatabaseModel())
     }
 }
