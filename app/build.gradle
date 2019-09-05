@@ -45,13 +45,7 @@ dependencies {
     // Retrofit with Converters
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$version_retrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$version_retrofit"
-    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     implementation "com.google.code.gson:gson:$version_gson"
-
-    // Rx
-    implementation "io.reactivex.rxjava2:rxjava:2.2.10"
-    implementation "io.reactivex.rxjava2:rxandroid:2.0.2"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$version_glide"
@@ -64,4 +58,8 @@ dependencies {
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 }

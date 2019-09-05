@@ -10,6 +10,7 @@ buildscript {
     ext.version_glide = '3.7.0'
     ext.version_recyclerview = '1.1.0-beta03'
     ext.room_version = '2.2.0-beta01'
+    ext.coroutines_version = '1.2.1'
 
     repositories {
         google()
