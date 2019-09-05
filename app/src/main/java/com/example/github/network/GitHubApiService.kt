@@ -1,6 +1,6 @@
 package com.example.github.network
 
-import com.example.github.network.model.Repo
+import com.example.github.network.model.NetworkRepo
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -16,7 +16,7 @@ private val retrofit = Retrofit.Builder()
 interface GitHubApiService {
 
     @GET("users/{user}/repos")
-    suspend fun getRepos(@Path("user") user: String): List<Repo>
+    suspend fun getRepos(@Path("user") user: String): List<NetworkRepo>
 }
 
 object GitHubApi {

@@ -1,14 +1,14 @@
 package com.example.github.database.entity.mapper
 
 import com.example.github.database.entity.DatabaseRepo
-import com.example.github.network.model.Repo
+import com.example.github.network.model.NetworkRepo
 
-fun List<DatabaseRepo>.asDomainModel(): List<Repo> {
+fun List<DatabaseRepo>.asDomainModel(): List<NetworkRepo> {
     return map {
         it.asDomainModel()
     }
 }
 
-fun DatabaseRepo.asDomainModel(): Repo {
-    return Repo(id, name, description)
+fun DatabaseRepo.asDomainModel(): NetworkRepo {
+    return NetworkRepo(id, name, description)
 }

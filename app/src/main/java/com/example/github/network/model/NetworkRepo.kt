@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Repo(
+data class NetworkRepo(
     @SerializedName("id")
     val id: String,
 

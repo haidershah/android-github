@@ -6,26 +6,26 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.github.databinding.ListItemRepoBinding
-import com.example.github.network.model.Repo
+import com.example.github.network.model.NetworkRepo
 
 class ReposAdapter(private val onClickListener: OnClickListener) :
-    ListAdapter<Repo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {
+    ListAdapter<NetworkRepo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {
 
     class RepoViewHolder(val binding: ListItemRepoBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    class RepoDiffCallback : DiffUtil.ItemCallback<Repo>() {
-        override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+    class RepoDiffCallback : DiffUtil.ItemCallback<NetworkRepo>() {
+        override fun areItemsTheSame(oldItem: NetworkRepo, newItem: NetworkRepo): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+        override fun areContentsTheSame(oldItem: NetworkRepo, newItem: NetworkRepo): Boolean {
             return oldItem == newItem
         }
     }
 
-    class OnClickListener(val clickListener: (repo: Repo) -> Unit) {
-        fun onClick(repo: Repo) = clickListener(repo)
+    class OnClickListener(val clickListener: (repo: NetworkRepo) -> Unit) {
+        fun onClick(repo: NetworkRepo) = clickListener(repo)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
