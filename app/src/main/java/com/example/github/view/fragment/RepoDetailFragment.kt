@@ -1,4 +1,4 @@
-package com.example.github.view
+package com.example.github.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.example.github.view
+package com.example.github.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -36,7 +36,9 @@ class ReposFragment : Fragment() {
 
         val adapter = ReposAdapter(ReposAdapter.OnClickListener {
             findNavController().navigate(
-                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(it)
+                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(
+                    it
+                )
             )
         })
         binding.reposRecyclerView.adapter = adapter
