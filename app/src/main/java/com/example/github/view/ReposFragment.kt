@@ -12,11 +12,13 @@ import com.example.github.R
 import com.example.github.databinding.FragmentReposBinding
 import com.example.github.view.adapter.ReposAdapter
 import com.example.github.viewmodel.ReposViewModel
+import com.example.github.viewmodel.factory.ReposViewModelFactory
 
 class ReposFragment : Fragment() {
 
     private val viewModel: ReposViewModel by lazy {
-        ViewModelProviders.of(this).get(ReposViewModel::class.java)
+        ViewModelProviders.of(this, ReposViewModelFactory(context!!))
+            .get(ReposViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -34,7 +36,8 @@ class ReposFragment : Fragment() {
 
         val adapter = ReposAdapter(ReposAdapter.OnClickListener {
             findNavController().navigate(
-                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(it))
+                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(it)
+            )
         })
         binding.reposRecyclerView.adapter = adapter
 

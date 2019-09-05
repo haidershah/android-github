@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:listData="@{viewModel.response}"
+        app:listData="@{viewModel.repos}"
         tools:listitem="@layout/list_item_repo" />
 
 </layout>
