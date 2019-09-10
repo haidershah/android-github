@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/reposFragment"
         android:name="com.example.github.view.fragment.ReposFragment"
-        android:label="ReposFragment"
+        android:label="Repositories"
         tools:layout="@layout/fragment_repos">
         <action
             android:id="@+id/action_reposFragment_to_repoDetailFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/repoDetailFragment"
         android:name="com.example.github.view.fragment.RepoDetailFragment"
-        android:label="RepoDetailFragment"
+        android:label="Repository Detail"
         tools:layout="@layout/fragment_repo_detail">
         <argument
             android:name="repo"
