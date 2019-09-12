@@ -6,6 +6,7 @@ import com.example.github.database.RepoDatabase
 import com.example.github.repository.ReposRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 class ReposViewModel(context: Context) : ViewModel() {
@@ -13,11 +14,18 @@ class ReposViewModel(context: Context) : ViewModel() {
     private val database = RepoDatabase.getInstance(context)
     private val repository = ReposRepository(database)
 
+    val repos = repository.repos
+
+    private val apiJob = Job()
+
     init {
-        CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.IO + apiJob).launch {
             repository.getRepos("haidershah")
         }
     }
 
-    val repos = repository.repos
+    override fun onCleared() {
+        super.onCleared()
+        apiJob.cancel()
+    }
 }
