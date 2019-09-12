@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.github.databinding.ListItemRepoBinding
 import com.example.github.domain.model.Repo
+import com.example.github.view.listener.ReposListener
 
-class ReposAdapter(private val onClickListener: OnClickListener) :
+class ReposAdapter(private val listener: ReposListener) :
     ListAdapter<Repo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {
 
     class RepoViewHolder(val binding: ListItemRepoBinding) :
@@ -24,10 +25,6 @@ class ReposAdapter(private val onClickListener: OnClickListener) :
         }
     }
 
-    class OnClickListener(val clickListener: (repo: Repo) -> Unit) {
-        fun onClick(repo: Repo) = clickListener(repo)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ListItemRepoBinding.inflate(inflater, parent, false)
@@ -37,11 +34,7 @@ class ReposAdapter(private val onClickListener: OnClickListener) :
     override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
         val item = getItem(position)
         holder.binding.repo = item
-
-        holder.binding.root.setOnClickListener {
-            onClickListener.onClick(item)
-        }
-
+        holder.binding.listener = listener
         holder.binding.executePendingBindings()
     }
 }

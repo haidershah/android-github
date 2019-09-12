@@ -10,12 +10,13 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.github.R
 import com.example.github.databinding.FragmentReposBinding
+import com.example.github.domain.model.Repo
 import com.example.github.view.adapter.ReposAdapter
+import com.example.github.view.listener.ReposListener
 import com.example.github.viewmodel.ReposViewModel
 import com.example.github.viewmodel.factory.ReposViewModelFactory
 
-class ReposFragment : Fragment() {
-
+class ReposFragment : Fragment(), ReposListener {
     private val viewModel: ReposViewModel by lazy {
         ViewModelProviders.of(this, ReposViewModelFactory(context!!))
             .get(ReposViewModel::class.java)
@@ -33,16 +34,14 @@ class ReposFragment : Fragment() {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-
-        val adapter = ReposAdapter(ReposAdapter.OnClickListener {
-            findNavController().navigate(
-                ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(
-                    it
-                )
-            )
-        })
-        binding.reposRecyclerView.adapter = adapter
+        binding.reposRecyclerView.adapter = ReposAdapter(this)
 
         return binding.root
+    }
+
+    override fun onRepoClicked(repo: Repo) {
+        findNavController().navigate(
+            ReposFragmentDirections.actionReposFragmentToRepoDetailFragment(repo)
+        )
     }
 }
