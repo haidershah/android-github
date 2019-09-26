@@ -2,12 +2,10 @@ package com.example.github.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.github.database.RepoDatabase
 import com.example.github.repository.ReposRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class ReposViewModel(context: Context) : ViewModel() {
 
@@ -16,16 +14,15 @@ class ReposViewModel(context: Context) : ViewModel() {
 
     val repos = repository.repos
 
-    private val apiJob = Job()
-
     init {
-        CoroutineScope(Dispatchers.IO + apiJob).launch {
-            repository.getRepos("haidershah")
+        viewModelScope.launch {
+            getRepos()
         }
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        apiJob.cancel()
+    private suspend fun getRepos() {
+        withContext(Dispatchers.IO) {
+            repository.getRepos("haidershah")
+        }
     }
 }
