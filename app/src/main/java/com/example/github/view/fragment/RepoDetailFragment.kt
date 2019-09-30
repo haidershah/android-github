@@ -28,6 +28,7 @@ class RepoDetailFragment : Fragment() {
             inflater, R.layout.fragment_repo_detail, container, false
         )
 
+        binding.lifecycleOwner = this
         binding.viewModel = viewModel
         return binding.root
     }
