@@ -1,16 +1,10 @@
 
 P
  app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-i
-9app/src/main/java/com/example/github/view/MainActivity.kt,d/7/d7602eb39f75e818fedafb00288ab1c0c80e3594
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @
 app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
-j
-:app/src/main/java/com/example/github/view/ReposFragment.kt,c/a/ca9257be8ab5b8259db748340e6c5560b15ddb62
-b
-2app/src/main/java/com/example/github/model/Repo.kt,1/5/15b78eac746cf787aaf339d39909505a80d27d4b
 p
 @app/src/main/java/com/example/github/network/GitHubApiService.kt,4/5/45bc2d2ebaa1c2a6f1c3c655a8001dbd48ffb91e
 p
@@ -26,7 +20,19 @@ u
 Eapp/src/main/java/com/example/github/viewmodel/RepoDetailViewModel.kt,1/c/1cad5dca987b4380f6a8e2c96d3bed626d4d87fb
 q
 Aapp/src/main/java/com/example/github/view/adapter/ReposAdapter.kt,f/b/fb555a6c521723bb005d055269f476ee31729594
-o
-?app/src/main/java/com/example/github/view/RepoDetailFragment.kt,5/b/5beb4bc32176a1530e8b178acb36669857da6e5d
 „
 Tapp/src/main/java/com/example/github/viewmodel/factory/RepoDetailViewModelFactory.kt,7/2/720431fc7e909304ad3ab64f881fd949faf0634a
+s
+Capp/src/main/java/com/example/github/view/fragment/ReposFragment.kt,d/8/d8b1a57332c3fb41cd6a66c86986ec63016eedfc
+w
+Gapp/src/main/java/com/example/github/network/model/mapper/RepoMapper.kt,d/3/d32a112efde00554cf0a12716c21373f3d777ea3
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+l
+<app/src/main/java/com/example/github/database/dao/RepoDao.kt,e/a/ea147ff573574ee60b3c5a5cb76904eff38334b3
+z
+Japp/src/main/java/com/example/github/view/callback/RepoBoundaryCallback.kt,a/3/a30067a1f2cd00fa7638f7be280ff3e46646fe77
+r
+Bapp/src/main/java/com/example/github/repository/ReposRepository.kt,6/9/698c2c9392038468c544bc7968a2480f986eb02d
+n
+>app/src/main/java/com/example/github/work/RefreshDataWorker.kt,f/b/fbf994dcf62d036eb860249e1f64bb21fd5dd9dc

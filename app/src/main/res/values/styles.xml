@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RepoName">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">@color/repoName</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RepoDescription">
+        <item name="android:lineSpacingMultiplier">1.25</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+    </style>
 </resources>
