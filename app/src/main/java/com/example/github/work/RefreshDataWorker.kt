@@ -5,6 +5,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.example.github.database.RepoDatabase
 import com.example.github.repository.ReposRepository
+import com.example.github.viewmodel.ReposViewModel.Companion.PAGE_SIZE
 import retrofit2.HttpException
 
 class RefreshDataWorker(appContext: Context, params: WorkerParameters) :
@@ -19,7 +20,7 @@ class RefreshDataWorker(appContext: Context, params: WorkerParameters) :
         val repository = ReposRepository(database)
 
         return try {
-            repository.getRepos("haidershah")
+            repository.getRepos("fabpot", 1, PAGE_SIZE)
             Result.success()
         } catch (e: HttpException) {
             Result.retry()

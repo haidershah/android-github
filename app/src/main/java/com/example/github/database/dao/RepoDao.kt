@@ -1,6 +1,6 @@
 package com.example.github.database.dao
 
-import androidx.lifecycle.LiveData
+import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -11,8 +11,11 @@ import com.example.github.database.entity.DatabaseRepo
 interface RepoDao {
 
     @Query("SELECT * FROM repos_table")
-    fun getRepos(): LiveData<List<DatabaseRepo>>
+    fun getRepos(): DataSource.Factory<Int, DatabaseRepo>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(repos: List<DatabaseRepo>)
+
+    @Query("DELETE FROM repos_table")
+    fun deleteAll()
 }

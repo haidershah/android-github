@@ -5,6 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 private const val BASE_URL = "https://api.github.com/"
 
@@ -16,7 +17,11 @@ private val retrofit = Retrofit.Builder()
 interface GitHubApiService {
 
     @GET("users/{user}/repos")
-    suspend fun getRepos(@Path("user") user: String): List<NetworkRepo>
+    suspend fun getRepos(
+        @Path("user") user: String,
+        @Query("page") page: Int,
+        @Query("per_page") perPage: Int
+    ): List<NetworkRepo>
 }
 
 object GitHubApi {

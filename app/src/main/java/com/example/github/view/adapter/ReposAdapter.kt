@@ -2,15 +2,15 @@ package com.example.github.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.github.databinding.ListItemRepoBinding
 import com.example.github.domain.model.Repo
 import com.example.github.view.listener.ReposListener
 
 class ReposAdapter(private val listener: ReposListener) :
-    ListAdapter<Repo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {
+    PagedListAdapter<Repo, ReposAdapter.RepoViewHolder>(RepoDiffCallback()) {
 
     class RepoViewHolder(val binding: ListItemRepoBinding) :
         RecyclerView.ViewHolder(binding.root)
