@@ -60,8 +60,8 @@
             android:id="@+id/starView"
             android:layout_width="19dp"
             android:layout_height="19dp"
-            android:src="@drawable/ic_star"
             android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toStartOf="@id/stars"
             app:layout_constraintTop_toTopOf="@id/repoLanguage" />
 
@@ -70,11 +70,35 @@
             android:id="@+id/stars"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
             android:text="@{repo.stars}"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/starView"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/forkView"
             app:layout_constraintTop_toTopOf="@+id/starView"
             tools:text="5" />
+
+        <ImageView
+            android:id="@+id/forkView"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_fork"
+            app:layout_constraintBottom_toBottomOf="@+id/stars"
+            app:layout_constraintEnd_toStartOf="@+id/forks"
+            app:layout_constraintTop_toTopOf="@+id/stars" />
+
+        <!-- Forks -->
+        <TextView
+            android:id="@+id/forks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@{repo.forks}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/forkView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/forkView"
+            tools:text="15" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
