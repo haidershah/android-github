@@ -2,6 +2,7 @@ package com.example.github.database.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "repos_table")
 data class DatabaseRepo(
@@ -11,5 +12,7 @@ data class DatabaseRepo(
 
     val name: String,
 
-    val description: String?
+    val description: String?,
+
+    val language: String?
 )

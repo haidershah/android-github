@@ -10,5 +10,5 @@ fun List<DatabaseRepo>.asDomainModel(): List<Repo> {
 }
 
 fun DatabaseRepo.asDomainModel(): Repo {
-    return Repo(id, name, description)
+    return Repo(id, name, description, language)
 }

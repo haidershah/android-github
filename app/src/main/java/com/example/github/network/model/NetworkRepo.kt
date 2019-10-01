@@ -10,5 +10,8 @@ data class NetworkRepo(
     val name: String,
 
     @SerializedName("description")
-    val description: String?
+    val description: String?,
+
+    @SerializedName("language")
+    val language: String?
 )
