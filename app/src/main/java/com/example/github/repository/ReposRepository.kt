@@ -4,7 +4,7 @@ import androidx.paging.DataSource
 import com.example.github.database.RepoDatabase
 import com.example.github.database.entity.mapper.asDomainModel
 import com.example.github.domain.model.Repo
-import com.example.github.network.model.mapper.asDatabaseModel
+import com.example.github.network.model.mapper.asDatabaseModels
 import com.example.github.network.GitHubApi
 
 class ReposRepository(private val database: RepoDatabase) {
@@ -20,6 +20,6 @@ class ReposRepository(private val database: RepoDatabase) {
         if (page == 1) {
             database.dao.deleteAll()
         }
-        database.dao.insertAll(repos.asDatabaseModel())
+        database.dao.insertAll(repos.asDatabaseModels())
     }
 }

@@ -3,12 +3,12 @@ package com.example.github.network.model.mapper
 import com.example.github.database.entity.DatabaseRepo
 import com.example.github.network.model.NetworkRepo
 
-fun List<NetworkRepo>.asDatabaseModel(): List<DatabaseRepo> {
+fun List<NetworkRepo>.asDatabaseModels(): List<DatabaseRepo> {
     return map {
-        it.asDatabaseModel()
+        it.asDatabaseModels()
     }
 }
 
-fun NetworkRepo.asDatabaseModel(): DatabaseRepo {
+fun NetworkRepo.asDatabaseModels(): DatabaseRepo {
     return DatabaseRepo(id, name, description, language, stars, forks)
 }
