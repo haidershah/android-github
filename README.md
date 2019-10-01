@@ -14,5 +14,8 @@ Network requests are cached on the device so that the users can right away view 
 return to the app. While users see cached data, a synchronous network call is made. If it
 succeeds, the cache is updated with fresh data. 
 
+## Async
+This app uses Kotlin Coroutines for its async background tasks.
+
 ## Service
 This app uses [Github](https://developer.github.com/v3/) apis as a network service.
