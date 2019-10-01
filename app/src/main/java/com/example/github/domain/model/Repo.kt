@@ -9,5 +9,7 @@ data class Repo(
     val id: String,
     val name: String,
     val description: String?,
-    val language: String?
+    val language: String?,
+    val stars: String,
+    val forks: String
 ) : Parcelable

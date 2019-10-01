@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{repo.name}"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Repo Name" />
 
@@ -40,19 +40,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{repo.description}"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/repoName"
             tools:text="This is the description for this Repo" />
 
         <!-- Language -->
         <TextView
+            android:id="@+id/repoLanguage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@{repo.language}"
             android:textSize="12sp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/repoDescription"
             tools:text="Kotlin" />
+
+        <ImageView
+            android:id="@+id/starView"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@drawable/ic_star"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toStartOf="@id/stars"
+            app:layout_constraintTop_toTopOf="@id/repoLanguage" />
+
+        <!-- Stars -->
+        <TextView
+            android:id="@+id/stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{repo.stars}"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/starView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/starView"
+            tools:text="5" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

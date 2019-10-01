@@ -13,5 +13,11 @@ data class NetworkRepo(
     val description: String?,
 
     @SerializedName("language")
-    val language: String?
+    val language: String?,
+
+    @SerializedName("stargazers_count")
+    val stars: Int,
+
+    @SerializedName("forks_count")
+    val forks: Int
 )

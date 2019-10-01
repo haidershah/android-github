@@ -14,5 +14,9 @@ data class DatabaseRepo(
 
     val description: String?,
 
-    val language: String?
+    val language: String?,
+
+    val stars: Int,
+
+    val forks: Int
 )

@@ -10,5 +10,5 @@ fun List<NetworkRepo>.asDatabaseModel(): List<DatabaseRepo> {
 }
 
 fun NetworkRepo.asDatabaseModel(): DatabaseRepo {
-    return DatabaseRepo(id, name, description, language)
+    return DatabaseRepo(id, name, description, language, stars, forks)
 }
