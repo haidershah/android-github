@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import com.example.github.R
 import com.example.github.databinding.FragmentRepoDetailBinding
 import com.example.github.viewmodel.RepoDetailViewModel
@@ -16,7 +16,7 @@ class RepoDetailFragment : Fragment() {
 
     private val viewModel: RepoDetailViewModel by lazy {
         val repo = RepoDetailFragmentArgs.fromBundle(arguments!!).repo
-        ViewModelProviders.of(this, RepoDetailViewModelFactory(repo))
+        ViewModelProvider(this, RepoDetailViewModelFactory(repo))
             .get(RepoDetailViewModel::class.java)
     }
 

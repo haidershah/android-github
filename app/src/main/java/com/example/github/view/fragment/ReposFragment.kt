@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.github.R
@@ -19,7 +19,7 @@ import com.example.github.viewmodel.factory.ReposViewModelFactory
 
 class ReposFragment : Fragment(), ReposListener {
     private val viewModel: ReposViewModel by lazy {
-        ViewModelProviders.of(this, ReposViewModelFactory(context!!))
+        ViewModelProvider(this, ReposViewModelFactory(context!!))
             .get(ReposViewModel::class.java)
     }
 
@@ -35,6 +35,7 @@ class ReposFragment : Fragment(), ReposListener {
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+        binding.reposRecyclerView.setHasFixedSize(true)
         binding.reposRecyclerView.adapter = ReposAdapter(this)
 
         // add dividers between RecyclerView's row items
