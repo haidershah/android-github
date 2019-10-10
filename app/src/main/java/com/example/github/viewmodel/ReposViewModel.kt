@@ -1,9 +1,8 @@
 package com.example.github.viewmodel
 
-import android.content.Context
-import android.util.Log
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.DataSource
 import androidx.paging.LivePagedListBuilder
@@ -14,9 +13,9 @@ import com.example.github.repository.ReposRepository
 import com.example.github.view.callback.RepoBoundaryCallback
 import kotlinx.coroutines.*
 
-class ReposViewModel(context: Context) : ViewModel() {
+class ReposViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val database = RepoDatabase.getInstance(context)
+    private val database = RepoDatabase.getInstance(getApplication())
     private val repository = ReposRepository(database)
 
     // keep the last requested page. When the request is successful, increment the page number.

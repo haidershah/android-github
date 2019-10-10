@@ -19,7 +19,7 @@ import com.example.github.viewmodel.factory.ReposViewModelFactory
 
 class ReposFragment : Fragment(), ReposListener {
     private val viewModel: ReposViewModel by lazy {
-        ViewModelProvider(this, ReposViewModelFactory(context!!))
+        ViewModelProvider(this, ReposViewModelFactory(activity!!.application))
             .get(ReposViewModel::class.java)
     }
 
