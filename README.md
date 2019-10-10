@@ -1,13 +1,18 @@
 ## Description
-A Sample Android app built in the MVVM architecture, utilizing the following Android Jetpack 
-Architecture components: 
-[Data Binding](https://developer.android.com/topic/libraries/data-binding),
-[LiveData](https://developer.android.com/topic/libraries/architecture/livedata),
-[Navigation](https://developer.android.com/topic/libraries/architecture/navigation.html), 
-[Paging](https://developer.android.com/topic/libraries/architecture/paging/),
-[Room](https://developer.android.com/topic/libraries/architecture/room),
-[ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel), and 
-[WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager).
+
+Displays all repos for user "fabpot".
+
+## Motivation
+
+To get familiar with the following:
+- MVVM architecture 
+- [Data Binding](https://developer.android.com/topic/libraries/data-binding)
+- [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+- [Navigation](https://developer.android.com/topic/libraries/architecture/navigation.html) 
+- [Paging](https://developer.android.com/topic/libraries/architecture/paging/)
+- [Room](https://developer.android.com/topic/libraries/architecture/room)
+- [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) 
+- [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager)
 
 ## Structure
 Network requests are cached on the device so that the users can right away view data when they
